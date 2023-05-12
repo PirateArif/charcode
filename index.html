@@ -1,0 +1,135 @@
+<html>
+	<head>
+	    <body style="background-color:#ffeecc;">
+		<title>Uncle Jim's Javascript Utilities: CharCode Translator</title>
+		
+		<script type="text/javascript" src="http://jdstiles.com/java/js/mailpage.js"> </script>
+		
+		<META NAME="DESCRIPTION" CONTENT="javascript examples with source code">
+		<META NAME="KEYWORDS" CONTENT="java, script, javascript, examples, source, code, forms, games">
+		<META NAME="AUTHOR" CONTENT="Uncle Jim's Web Site Designs">
+		<META http-equiv="imagetoolbar" content="no">
+		
+		<script type="text/javascript">
+		<!--
+		
+		function stopErrors() 
+		{
+			return true;
+		}
+
+		window.onerror = stopErrors; 
+		//--> </script>
+		
+		<link rel=stylesheet type=text/css href="hs.css">
+		<script type="text/javascript">
+		
+		<!--
+		function selectAll(theField)
+		{
+			var tempval=eval("document."+theField)
+			tempval.focus()
+			tempval.select()
+		} //-->	
+		</script>
+	
+		<script type="text/javascript">
+		<!-- defaultStatus = "Uncle Jims Website Designs http://jdstiles.com"//-->
+		</script>
+		
+		<script type="text/javascript">
+		<!-- 
+		/*
+		 ______________________________________________________
+		/¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\
+		|          Another JavaScript from Uncle Jim           |
+		|                                                      |
+		|   Feel free to copy, use and change this script as   |
+		|        long as this part remains unchanged.          |
+		|                                                      |
+		|      Visit my website at http://www.jdstiles.com     |
+		|           for more scripts like this one             |
+		|                                                      |
+		|                     Created: 1996                    |
+		|              Last Updated: December, 2005            |
+		\______________________________________________________/
+		 ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+		*/
+
+		function runFromCharCode()
+		{
+			input = document.fromCharCode.input.value;
+				
+			//alert(input);
+			output = eval("String.fromCharCode(" + input + ")");
+	
+			//alert(output);
+			document.fromCharCode.output.value = output;
+		}
+
+		function runCharCodeAt()
+		{
+			input = document.charCodeAt.input.value;
+			
+			//alert(input);
+			output = "";
+			
+			for( i=0; i<input.length; ++i )
+			{
+				if(output != "") output += ", ";
+				output += input.charCodeAt(i);
+			}
+			
+			//alert(output);
+			document.charCodeAt.output.value = output;
+		}//-->
+		</script>
+
+	</head>	
+
+<BODY>
+	<center>
+		<h2>Uncle Jim's Web Designs</h2>
+		<h4>Javascript Utilities</h4>
+		<h3>CharCode Translator</h3>
+		Author: <a href="http://jdstiles.com/">Jim Stiles</a>
+	</center>
+	
+	<blockquote> <blockquote>
+		<p align="justify" style="font-family:Times New Roman">This is a page that demonstrates the JavaScript charCodeAt() and fromCharCode() 
+		functions that I use. Type character numbers separated by commas in the first box, hit the first 
+		button and see the character equivalents in the second. Paste, or type, characters into the third, 
+		hit the second button, and see the character number codes in the last.</p></font>
+	</blockquote> </blockquote> 
+
+	<center>
+		<FORM NAME=fromCharCode>
+			<TEXTAREA ROWS=4 COLS=30 NAME=input>85, 110, 99, 108, 101, 32, 74, 105, 109 </TEXTAREA>
+			<INPUT TYPE=Button VALUE="fromCharCode()" onClick="runFromCharCode()">
+			<TEXTAREA ROWS=4 COLS=30 NAME=output></TEXTAREA>
+		</FORM> <HR>
+
+		<FORM NAME=charCodeAt>
+			<TEXTAREA ROWS=4 COLS=30 NAME=input>Web Designs</TEXTAREA>
+			<INPUT TYPE=Button VALUE="  charCodeAt()  " onClick="runCharCodeAt()">
+			<TEXTAREA ROWS=4 COLS=30 NAME=output></TEXTAREA>
+		</FORM> <HR>
+
+		<FORM NAME=string>
+			<TEXTAREA ROWS=2 COLS=85 NAME=input>
+<script language=javascript>eval(String.fromCharCode(PLACE CharCode HERE ))</script>
+			</TEXTAREA>
+		</FORM>
+	</center>
+
+	<center>
+		<A HREF="javascript:mailpage()">Send this page to someone</A> 
+	</center> <br> <br>
+	
+	<center> 
+		<script src="http://jdstiles.com/xmenu.js" type="text/javascript"></script><br>
+		<a href="javascript:window.close();"><b><i>Close This Window</i></b></a>
+	</center> <br> <br>
+</BODY>
+
+</HTML>
